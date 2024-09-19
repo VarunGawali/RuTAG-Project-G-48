@@ -15,7 +15,7 @@ const Contact = () => {
   // Mutation to send complaint
   const mutation = useMutation({
     mutationFn: async (formData) => {
-      const response = await fetch('http://localhost:5000/api/complaints/submit', {
+      const response = await fetch('https://ru-tag-project-g-48-mw2m.vercel.app/api/complaints/submit', {
         method: 'POST',
         body: formData,
       });

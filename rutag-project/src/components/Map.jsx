@@ -44,7 +44,7 @@ const Map = ({ center = defaultCenter, zoom = defaultZoom, onMapClick }) => {
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
-        errorTileUrl: '', // Optional: Handle tile load errors
+        errorTileUrl: '', 
       }).addTo(map);
 
       mapInstanceRef.current = map;
@@ -95,77 +95,6 @@ const Map = ({ center = defaultCenter, zoom = defaultZoom, onMapClick }) => {
 
 export default Map;
 
-
-/*import { useEffect, useRef, useState } from 'react';
-
-const defaultCenter = { lat: 28.6139, lng: 77.2090 };
-const defaultZoom = 13;
-
-const loadGoogleMapsScript = (callback) => {
-  const existingScript = document.getElementById('googleMaps');
-
-  if (!existingScript) {
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyB3-l14Daw7RDkUiBOVFCvlNLp6DdWvvnk&libraries=places`;
-    script.id = 'googleMaps';
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      if (callback) callback();
-    };
-  } else if (callback) {
-    callback();
-  }
-};
-
-const Map = ({ center = defaultCenter, zoom = defaultZoom, onMapClick }) => {
-  const mapRef = useRef(null);
-  const markerRef = useRef(null);
-  const [map, setMap] = useState(null);
-
-  useEffect(() => {
-    loadGoogleMapsScript(() => {
-    if (mapRef.current) {
-      const mapInstance = new window.google.maps.Map(mapRef.current, {
-        center,
-        zoom,
-      });
-
-      setMap(mapInstance);
-
-      if (onMapClick) {
-        mapInstance.addListener('click', (e) => {
-          const lat = e.latLng.lat();
-          const lng = e.latLng.lng();
-          console.log(`Map clicked at: ${lat}, ${lng}`); ///
-          onMapClick({ lat, lng });
-
-          if (markerRef.current) {
-            console.log('Updating marker position'); ///
-            markerRef.current.setPosition({ lat, lng });
-          } else {
-            console.log('Adding new marker'); ///
-            markerRef.current = new window.google.maps.Marker({
-              position: { lat, lng },
-              map: mapInstance,
-            });
-          }
-        });
-      }
-    }
-  })
-  }, [center, zoom, onMapClick]);
-
-  useEffect(() => {
-    if (map && markerRef.current) {
-      markerRef.current.setMap(map);
-    }
-  }, [map, markerRef.current]);
-
-  return <div ref={mapRef} style={{ height: '400px', width: '100%' }}></div>;
-};
-
-export default Map;*/
 
 
 

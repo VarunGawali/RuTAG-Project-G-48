@@ -19,7 +19,7 @@ const statuses = [
 
 // Fetch function for getting a specific complaint
 const fetchComplaint = async (id) => {
-  const response = await fetch(`http://localhost:5000/api/complaints/${id}`);
+  const response = await fetch(`https://ru-tag-project-g-48-mw2m.vercel.app/api/complaints/${id}`);
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }

@@ -5,7 +5,7 @@ import io from 'socket.io-client';
 
 // Fetch function for getting complaints
 const fetchComplaints = async () => {
-  const response = await fetch('http://localhost:5000/api/complaints');
+  const response = await fetch('https://ru-tag-project-g-48-mw2m.vercel.app/api/complaints');
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
@@ -14,7 +14,7 @@ const fetchComplaints = async () => {
 
 const ComplaintsTable = () => {
   const queryClient = useQueryClient();
-  const socket = io('http://localhost:5000', {
+  const socket = io('https://ru-tag-project-g-48-mw2m.vercel.app', {
     withCredentials: true
   });
 
