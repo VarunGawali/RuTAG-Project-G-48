@@ -17,7 +17,7 @@ L.Icon.Default.mergeOptions({
 
 // Default center and zoom level
 const defaultCenter = [28.6139, 77.2090];
-const defaultZoom = 13;
+const defaultZoom = 18;
 
 const Map = ({ center = defaultCenter, zoom = defaultZoom, onMapClick }) => {
   const mapRef = useRef(null);
