@@ -11,14 +11,15 @@
   "routes": [
     {
       "src": "/assets/(.*)",
-      "dest": "/assets/$1"
+      "dest": "/rutag-project/dist/assets/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/rutag-project/dist/index.html"
     }
   ]
 }
+
 
   
 
