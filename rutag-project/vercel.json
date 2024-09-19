@@ -1,19 +1,17 @@
 {
-  "builds": [
-    {
-      "src": "rutag-project/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
+    "builds": [
+      {
+        "src": "rutag-project/package.json",
+        "use": "@vercel/vite",
+        "config": {
+          "zeroConfig": true,
+          "distDir": "rutag-project/dist"
+        }
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "rutag-project/index.html" }
+    ]
 }
   
   
