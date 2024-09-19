@@ -4,13 +4,14 @@
         "src": "rutag-project/package.json",
         "use": "@vercel/vite",
         "config": {
-          "zeroConfig": true
+          "zeroConfig": true,
+          "distDir": "rutag-project/dist"
         }
       }
     ],
     "routes": [
       { "src": "/(.*)", "dest": "rutag-project/index.html" }
     ]
-  }
+}
   
   
