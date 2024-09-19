@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // your frontend URL
+    origin: "https://ru-tag-project-g-48.vercel.app", // your frontend URL
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
@@ -22,7 +22,7 @@ const io = new Server(server, {
 });
 
 app.use(cors({
-  origin: "http://localhost:5173", // URL of your frontend
+  origin: "https://ru-tag-project-g-48.vercel.app", // URL of your frontend
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
   credentials: true
@@ -52,19 +52,7 @@ mongoose.connect(mongoUri, {
 });
 
 // Routes
-app.get('/', async (req, res) => {
-  /*try {
-    // Fetch all complaints from the database
-    const complaints = await Complaint.find();
-
-    res.json(complaints);
-  } catch (error) {
-    // Handle any errors that occur during the fetch
-    console.error('Error fetching complaints:', error);
-    res.status(500).json({ error: 'Server error' });
-  }*/
-
-    
+app.get('/', async (req, res) => {  
   res.send('Server is running');
     
 });
