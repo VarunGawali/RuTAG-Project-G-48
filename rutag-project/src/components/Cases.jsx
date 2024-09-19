@@ -1,10 +1,13 @@
 import React from 'react'
+import caseImage1 from '/src/assets/case11.webp'
+import caseImage2 from '/src/assets/case2.webp'
+import caseImage3 from '/src/assets/case3.jpg'
 
 const CasesSolved = () => {
   const cases = [
-      { id: 1, title: 'Drainage Issue Resolved', description: 'Successfully addressed a severe drainage problem in a residential area.', image: '/src/assets/case11.webp' },
-      { id: 2, title: 'Public Sewer Line Fix', description: 'Fixed a major leak in the public sewer line, preventing contamination and ensuring smooth sewage disposal.', image: '/src/assets/case2.webp' },
-      { id: 3, title: 'Commercial Drain Upgrade', description: 'Upgraded the drainage system for a commercial property.', image: '/src/assets/case3.jpg' },
+      { id: 1, title: 'Drainage Issue Resolved', description: 'Successfully addressed a severe drainage problem in a residential area.', image: caseImage1 },
+      { id: 2, title: 'Public Sewer Line Fix', description: 'Fixed a major leak in the public sewer line, preventing contamination and ensuring smooth sewage disposal.', image: caseImage2 },
+      { id: 3, title: 'Commercial Drain Upgrade', description: 'Upgraded the drainage system for a commercial property.', image: caseImage3 },
   ];
 
   return (
