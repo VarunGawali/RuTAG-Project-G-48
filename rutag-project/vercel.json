@@ -1,21 +1,21 @@
 {
   "builds": [
     {
-      "src": "rutag-project/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "rutag-project/dist"
+        "distDir": "dist"
       }
     }
   ],
   "routes": [
     {
       "src": "/assets/(.*)",
-      "dest": "/rutag-project/dist/assets/$1"
+      "dest": "/dist/assets/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/rutag-project/dist/index.html"
+      "dest": "/dist/index.html"
     }
   ]
 }
