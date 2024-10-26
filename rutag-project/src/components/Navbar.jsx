@@ -77,7 +77,7 @@ const Navbar = () => {
         <div className={`flex flex-col justify-between h-screen px-4 mt-16 py-7 bg-brandPrimary/90 ${isMenuOpen ? 'block fixed top-0 left-0 right-0' : 'hidden'} transition-all `}>
           <div className='space-y-4'>
           {navItems.map(({ link, path }) => (
-            <Link className='block text-base text-white hover:text-neutralDGray' key={path} to={path} smooth={true} duration={500} offset={-100}>
+            <Link className='block text-base text-white hover:text-neutralDGray' key={path} to={path} smooth={true} duration={500} offset={-100} onClick={toggleMenu}>
               {link}
             </Link>
           ))}
